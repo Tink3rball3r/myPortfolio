@@ -1,0 +1,174 @@
+/*
+=========
+resets
+=========
+*/
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	font-family: Calibri, Candara, Segoe, Segoe UI, Optima, Arial, sans-serif;
+	font-size: 62.5%;
+	// letter-spacing: 3px;
+	color: var(--white);
+}
+
+li {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+a {
+	text-decoration: none;
+	cursor: pointer;
+	color: var(--white);
+}
+
+img,
+picture {
+	max-width: 100%;
+	display: block;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin: 0;
+	padding: 0;
+}
+
+span {
+	display: block;
+}
+
+p {
+	font-size: 1.6rem;
+	padding: 1.5rem 0 0 0;
+	line-height: 1.5;
+	color: var(--black);
+}
+
+/*
+=========
+variables
+=========
+*/
+
+:root {
+	--dark-grey: #2c3531;
+	--light-grey: #e9eaea;
+	--dark-green: #116466;
+	--light-green: #b7d0d1;
+	--light-brown: #d9b08c;
+	--sand: #ffcb9a;
+	--light-blue: #d1e8e2;
+	--white: #fdfbfa;
+	--ff-main: Calibri, Candara, Segoe, Segoe UI, Optima, Arial, sans-serif;
+	--transiton: 0.2s ease-in;
+}
+
+/*
+=========
+helpers
+=========
+*/
+
+.container {
+	margin: 0 0 0 28rem;
+	padding: 0 16rem;
+}
+.flex-row {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.flex-column {
+	display: flex;
+	flex-flow: column;
+	align-items: center;
+}
+.centered {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.bg-light {
+	background-color: var(--white);
+}
+// .bg-medium {
+// media querries can be nested here ;)
+// }
+
+.bg-dark {
+	background-color: var(--dark-grey);
+}
+
+.sect-heading {
+	color: var(--dark-green);
+}
+
+// .text-light {
+
+// }
+
+// .text-medium {
+
+// }
+
+// .text-dark{
+
+// }
+
+.fs-sm {
+	font-size: 2rem;
+}
+
+.fs-md {
+	font-size: 3rem;
+}
+
+.fs-lg {
+	font-size: 4rem;
+	color: var(--light-blue);
+}
+
+.font-xlg {
+	font-size: 4rem;
+}
+
+// .font-bold{
+
+// }
+
+.round {
+	border-radius: 50%;
+}
+
+// .rounded {
+// }
+
+// .shadow {
+// }
+
+.underline {
+	padding: 5rem 0 0 0;
+}
+
+.underline::after {
+	content: '';
+	display: block;
+	width: 3%;
+	padding: 0.5rem 0;
+	border-bottom: 3px solid var(--sand);
+}

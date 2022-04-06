@@ -1,0 +1,258 @@
+/* ToDO--> 
+	1> breakpoints for laptop, tablet, mobile
+    2> Make icons    
+*/
+
+/* 
+==========
+variables
+==========
+ */
+
+:root {
+	--primaryColor: #14274e;
+	--secondaryColor: #394867;
+	--accentColor: #9ba4b4;
+	--underline: #42c2ff;
+	--white: #f1f6f9;
+	--black: #2c394b;
+}
+
+/* 
+=======
+resets
+=======
+*/
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+li {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+a {
+	text-decoration: none;
+	cursor: pointer;
+	color: var(--white);
+}
+
+img,
+picture {
+	max-width: 100%;
+	display: block;
+}
+
+/* ----> resets end */
+
+/* global styles <----- */
+
+html {
+	font-family: Calibri, Candara, Segoe, Segoe UI, Optima, Arial, sans-serif;
+	font-size: 62.5%;
+	letter-spacing: 3px;
+	color: var(--white);
+}
+
+span {
+	display: block;
+}
+
+.container {
+	margin: 0 0 0 28rem;
+	padding: 0 16rem;
+}
+
+.whiteBack {
+	background-color: var(--white);
+}
+
+.underlined {
+	padding: 5rem 0 0 0;
+}
+
+.underlined::after {
+	content: '';
+	display: block;
+	width: 5%;
+	padding: 0.5rem 0;
+	border-bottom: 3px solid var(--underline);
+}
+
+p {
+	font-size: 1.6rem;
+	padding: 1.5rem 0 0 0;
+	line-height: 1.5;
+	color: var(--black);
+}
+
+nav h1 span,
+#hero span {
+	font-weight: 400;
+}
+
+/* ----> global styles end */
+
+/* Don't know what to name this */
+
+.flex {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-flow: row wrap;
+}
+.cenFlex {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.colFLex {
+	display: flex;
+	flex-flow: column;
+	align-items: center;
+}
+
+.rounded {
+	border-radius: 50%;
+}
+
+.heading {
+	font-size: 4rem;
+	color: var(--primaryColor);
+}
+
+/* Don't know what to name this end */
+
+/* ----> Navigation bar */
+
+nav {
+	position: fixed;
+	width: 28rem;
+	height: 100%;
+	background-color: var(--primaryColor);
+	padding: 0 3rem;
+}
+
+.navImageContainer {
+	/* the round background of the image */
+	height: 150px;
+	width: 150px;
+	background-color: var(--secondaryColor);
+	margin: 15rem 0 2rem 0;
+	cursor: pointer;
+}
+
+.navImg {
+	/* the image of me */
+	height: 140px;
+	width: 140px;
+}
+nav h1 {
+	font-weight: 600;
+	font-size: 3rem;
+	text-align: center;
+	margin: 0 0 2rem 0;
+}
+
+.socialMediaLinks {
+	gap: 1rem;
+	margin: 1rem 0 0 0;
+}
+
+.socialMediaLinks img {
+	width: 4rem;
+}
+
+.socialMediaLinks li {
+	width: 4.5rem;
+	height: 4.5rem;
+	background-color: var(--secondaryColor);
+	cursor: pointer;
+}
+
+.socialMediaLinks li:hover {
+	background-color: var(--underline);
+	transition: 0.1s ease-in;
+}
+
+.siteNavigationContainer {
+	align-self: flex-start;
+	font-size: 2rem;
+	font-weight: 200;
+	padding: 0.5rem;
+	margin: 1rem 0 0 0;
+	/* border: 1px solid black; */
+}
+
+.siteNavigation .navIcon {
+	display: inline-block;
+	border-radius: 0;
+	width: 2rem;
+	margin: 0 1rem 0 0;
+}
+
+.siteNavigation li {
+	margin: 3rem 0;
+}
+
+.siteNavigation li a:hover {
+	color: var(--underline);
+	transition: 0.1s ease-in;
+}
+
+/* ---> navigation bar end */
+
+/* ---> hero section */
+
+#hero {
+	position: relative;
+	background-image: url(/dist/images/where.jpg);
+	height: 100vh;
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+#hero h2 {
+	position: absolute;
+	font-size: 5rem;
+	color: white;
+	top: 50%;
+	right: 20%;
+	transform: translate(-50%, -50%);
+	padding: 0 0 1rem 0;
+	border-bottom: 4px solid var(--underline);
+}
+
+/* ---> hero section end */
+
+/* About section <--- */
+
+.aboutContent {
+	gap: 3rem;
+	padding: 0 0 10rem 0;
+	margin: 10rem 0 5rem 0;
+}
+
+.aboutContent img {
+	width: 400px;
+	height: 400px;
+}
+.techContainer {
+	gap: 5rem;
+	margin: 5rem 0 0 0;
+}
+
+.aboutContent .techImage {
+	width: 10em;
+	height: auto;
+}
+/* ---> About section end */

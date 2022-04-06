@@ -1,0 +1,306 @@
+/*
+=========
+resets
+=========
+*/
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-family: Calibri, Candara, Segoe, Segoe UI, Optima, Arial, sans-serif;
+  font-size: 62.5%;
+  color: var(--white);
+}
+
+li {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+  color: var(--white);
+}
+
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+}
+
+span {
+  display: block;
+}
+
+p {
+  font-size: 1.6rem;
+  padding: 1.5rem 0 0 0;
+  line-height: 1.5;
+  color: var(--black);
+}
+
+/*
+=========
+variables
+=========
+*/
+:root {
+  --dark-grey: #2c3531;
+  --light-grey: #e9eaea;
+  --dark-green: #116466;
+  --light-green: #b7d0d1;
+  --light-brown: #d9b08c;
+  --sand: #ffcb9a;
+  --light-blue: #d1e8e2;
+  --white: #fdfbfa;
+  --ff-main: Calibri, Candara, Segoe, Segoe UI, Optima, Arial, sans-serif;
+  --transiton: 0.2s ease-in;
+}
+
+/*
+=========
+helpers
+=========
+*/
+.container {
+  margin: 0 0 0 28rem;
+  padding: 0 16rem;
+}
+
+.flex-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.flex-column {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.centered {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.bg-light {
+  background-color: var(--white);
+}
+
+.bg-dark {
+  background-color: var(--dark-grey);
+}
+
+.sect-heading {
+  color: var(--dark-green);
+}
+
+.fs-sm {
+  font-size: 2rem;
+}
+
+.fs-md {
+  font-size: 3rem;
+}
+
+.fs-lg {
+  font-size: 4rem;
+  color: var(--light-blue);
+}
+
+.font-xlg {
+  font-size: 4rem;
+}
+
+.round {
+  border-radius: 50%;
+}
+
+.underline {
+  padding: 5rem 0 0 0;
+}
+
+.underline::after {
+  content: '';
+  display: block;
+  width: 3%;
+  padding: 0.5rem 0;
+  border-bottom: 3px solid var(--sand);
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  overflow: hidden;
+  -webkit-transition: width 0.5s ease-in-out;
+  transition: width 0.5s ease-in-out;
+}
+
+/*
+==========
+nav
+==========
+*/
+.img-con {
+  height: 15rem;
+  width: 15rem;
+  margin: 4rem auto 2rem auto;
+  background-color: var(--sand);
+}
+
+h1 {
+  text-align: center;
+}
+
+.social-links {
+  margin: 2rem 0;
+}
+
+.social-link {
+  height: 4rem;
+  width: 4rem;
+  margin: 0 1rem;
+  background-color: var(--sand);
+}
+
+.social-link a {
+  margin: 0.4rem 0 0 0;
+  font-size: 3rem;
+  color: var(--dark-grey);
+}
+
+.site-nav {
+  padding: 9rem 4rem 0 4rem;
+}
+
+.site-nav li {
+  margin: 0 0 2rem 0;
+}
+
+.site-nav li i {
+  margin: 0 1rem 0 0;
+}
+
+/*
+==========
+burger
+==========
+*/
+.burger-btn {
+  position: absolute;
+  right: 4rem;
+  top: 5rem;
+  width: 10px;
+  height: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#hamburger {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0;
+}
+
+#hamburger .line {
+  fill: none;
+  stroke: var(--sand);
+  stroke-width: 6;
+  -webkit-transition: stroke-dasharray 600ms cubic-bezier(0.4, 0, 0.2, 1), stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: stroke-dasharray 600ms cubic-bezier(0.4, 0, 0.2, 1), stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+#hamburger .line1 {
+  stroke-dasharray: 60 207;
+  stroke-width: 6;
+}
+
+#hamburger .line2 {
+  stroke-dasharray: 60 60;
+  stroke-width: 6;
+}
+
+#hamburger .line3 {
+  stroke-dasharray: 60 207;
+  stroke-width: 6;
+}
+
+#hamburger.open .line1 {
+  stroke-dasharray: 90 207;
+  stroke-dashoffset: -134;
+  stroke-width: 6;
+}
+
+#hamburger.open .line2 {
+  stroke-dasharray: 1 60;
+  stroke-dashoffset: -30;
+  stroke-width: 6;
+}
+
+#hamburger.open .line3 {
+  stroke-dasharray: 90 207;
+  stroke-dashoffset: -134;
+  stroke-width: 6;
+}
+
+.site-nav li a:hover {
+  color: var(--sand);
+}
+
+.show {
+  width: 100%;
+}
+/*# sourceMappingURL=main.css.map */
